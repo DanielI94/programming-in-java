@@ -1,5 +1,10 @@
 package agh.ii.prinjava.proj1.impl;
 
+
+/**
+ * To implement a Doubly Linked list structure
+ * @param
+ */
 public class DLinkList<E> {
     private Node<E> first;
 
@@ -9,7 +14,7 @@ public class DLinkList<E> {
         Node<T> prev;
     }
 
-    /**
+    /** To check if the List is empty
      * @return boolean
      */
     public boolean isEmpty() {
@@ -18,7 +23,6 @@ public class DLinkList<E> {
 
     /**
      * Add a node at the beginning
-     *
      * @param
      */
     public void addFirst(E elem) {
@@ -35,8 +39,7 @@ public class DLinkList<E> {
 
     /**
      * Add a node at the end
-     *
-     * @param elem
+     * @param
      */
     public void addLast(E elem) {
         Node<E> newNode = new Node<E>();
@@ -55,8 +58,8 @@ public class DLinkList<E> {
 
     /**
      * Remove the first element of the DLL
-     *
-     * @return Node (the deelted node)
+     * @return Node (the deleted node)
+     * @param
      */
     public E removeFirst() {
         if (!isEmpty()){
@@ -71,8 +74,7 @@ public class DLinkList<E> {
     }
 
     /**
-     * remove the last element of the DLL
-     *
+     * removes the last element of the DLL
      * @return Node (the deleted one)
      */
     public E removeLast() {
@@ -94,7 +96,6 @@ public class DLinkList<E> {
         throw new RuntimeException("List is empty");
     }
 
-
     /**
      * @return the list as a String
      */
@@ -112,6 +113,9 @@ public class DLinkList<E> {
         return tostring;
     }
 
+    /**
+     * @return the first element of the DLL
+     */
     public E getFirstElement() {
         if(first != null) {
             return first.elem;
@@ -119,6 +123,9 @@ public class DLinkList<E> {
         throw new RuntimeException("List is empty");
     }
 
+    /**
+     * @return the last element of the DLL
+     */
     public E getLastElement() {
         if (first != null) {
             while (first.next != null) {
@@ -129,6 +136,9 @@ public class DLinkList<E> {
         throw new RuntimeException("List is empty");
     }
 
+    /**
+     * @return the number of elements of our DLL
+     */
     public int getNumofElems(){
         int count = 0;
         while (first != null){

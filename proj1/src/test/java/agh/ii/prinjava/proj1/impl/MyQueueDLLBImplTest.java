@@ -19,6 +19,9 @@ class MyQueueDLLBImplTest {
     void tearDown() {
     }
 
+    /**
+     * This method tests the enqueue method
+     */
     @Test
     void enqueue(){
         queueOfInts.enqueue(4);
@@ -26,6 +29,9 @@ class MyQueueDLLBImplTest {
         assertEquals("DLL{ 5 4 }", queueOfInts.toString());
     }
 
+    /**
+     * This method tests the dequeue method
+     */
     @Test
     void dequeue(){
         queueOfInts.enqueue(4);
@@ -35,12 +41,18 @@ class MyQueueDLLBImplTest {
         assertEquals("DLL{ }", queueOfInts.toString());
     }
 
+    /**
+     * This method tests the peek method
+     */
     @Test
     void peek(){
         enqueue();
         assertEquals(4, queueOfInts.peek());
     }
 
+    /**
+     * This method tests the toStringtest method
+     */
     @Test
     void toStringtest(){
         enqueue();

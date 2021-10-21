@@ -18,6 +18,9 @@ class MyStackDLLBImplTest {
     void tearDown() {
     }
 
+    /**
+     * This method tests the push method
+     */
     @Test
     void push(){
         stackOfInts.push(4);
@@ -25,6 +28,9 @@ class MyStackDLLBImplTest {
         assertEquals("DLL{ 5 4 }", stackOfInts.toString());
     }
 
+    /**
+     * This method tests the pop method
+     */
     @Test
     void pop(){
         stackOfInts.push(4);
@@ -34,12 +40,18 @@ class MyStackDLLBImplTest {
         assertEquals("DLL{ }", stackOfInts.toString());
     }
 
+    /**
+     * This method tests the peek method
+     */
     @Test
     void peek(){
         push();
         assertEquals(5, stackOfInts.peek());
     }
 
+    /**
+     * This method tests the toStringtest method
+     */
     @Test
     void toStringtest(){
         push();
